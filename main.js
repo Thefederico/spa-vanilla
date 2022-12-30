@@ -1,7 +1,8 @@
-import './src/styles/style.css'
+import '@styles/style.css'
+import { router } from '@routes'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <h1>Hello world!</h1>
-  </div>
-`
+window.addEventListener('load', router)
+window.addEventListener('hashchange', () => {
+  router()
+  console.log('oeee')
+})
